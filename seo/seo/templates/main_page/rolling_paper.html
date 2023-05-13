@@ -1,0 +1,39 @@
+{% extends "navbar.html" %}
+
+{% block title %}★rolling paper★{% endblock %}
+
+{% block font %}'Jua', sans-serif{% endblock %}
+
+{% block style %}{% endblock %}
+
+{% block content %}
+<div align="center" style="margin:300px 0px 0px 0px;">
+  <h1 style="color: #333399;">★우리의 한마디~★</h1>
+  <img src="/static/img/손흥민.png" alt="My Image" height="250">
+  <div class="content">
+  <p> <b>게시판</b> 
+  </p>
+  </div>
+  <div>
+    <!--audio-->
+    <audio
+    preload="auto"
+    autoplay
+    loop 
+    controls
+    src="/static/audio/1.mp3" 
+    type="audio/mpeg"
+    >
+    브라우저가 audio 태그를 지원하지 않습니다
+    </audio>
+  </div>
+  <div>
+  <p> 
+    <a href="http://127.0.0.1:8000/" style="font-size: 20px; text-decoration: none; color: #2E2E2E; border: 2px solid #75B1FF; padding: 0 20px; border-radius: 50px; transition: all 0.3s ease-in-out;">▶home◀</a><br>
+    <a href="http://127.0.0.1:8000/rolling_paper/" style="font-size: 20px; text-decoration: none; color: #2E2E2E; border: 2px solid #75B1FF; padding: 0 20px; border-radius: 50px; transition: all 0.3s ease-in-out;">▶Rolling paper◀</a><br>
+    <a href="http://127.0.0.1:8000/profile/" style="font-size: 20px; text-decoration: none; color: #2E2E2E; border: 2px solid #75B1FF; padding: 0 20px; border-radius: 50px; transition: all 0.3s ease-in-out;">▶profile◀</a><br>
+    <a href="http://127.0.0.1:8000/quotes/" style="font-size: 20px; text-decoration: none; color: #2E2E2E; border: 2px solid #75B1FF; padding: 0 20px; border-radius: 50px; transition: all 0.3s ease-in-out;">▶quotes◀</a><br>
+  </p>
+  </div>
+</div>
+{% endblock %}

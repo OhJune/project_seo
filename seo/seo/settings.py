@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'main_page.apps.MainPageConfig',
+    'common.apps.CommonConfig',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +78,12 @@ WSGI_APPLICATION = 'seo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mydb',
+        'USER' : 'root',
+        'PASSWORD' : '12345678',
+        'HOST' : 'jibeen-mysql.c9mnzpvc8vyh.ap-northeast-2.rds.amazonaws.com',
+        'PORT' : '3306'
     }
 }
 

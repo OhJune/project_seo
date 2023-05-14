@@ -1,0 +1,29 @@
+{% load static %}
+<!doctype html>
+<html lang="ko">
+
+{% include "navbar.html" %}
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/font.css' %}">
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Gowun+Batang&family=Jua&display=swap'); */
+        
+        body {
+          background: url("/static/img/서찬웅프로젝트.png");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-color: black;
+          background-position: center center;
+          font-family: 'CustomFont';
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          min-height: 100vh;
+          margin: auto;
+        }
+    </style>
+  </head>
+</html>

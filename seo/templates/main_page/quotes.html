@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
@@ -5,39 +6,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/font.css' %}">
     <title>★강사님의 주옥같은 명언.zip★</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@300&display=swap');
 
-        * {
-            font-family: 'Hahmlet', serif;
-        }
         .bg {
             width: auto;
             background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bg-grid.png");
             background-size: cover;
             background-position: center;
-            
+            font-family: 'Hahmlet', serif;
             margin: auto;
         }
 
         .bucket {
             width: 160px;
             height: 160px;
+            font-family: 'Hahmlet', serif;
             background-size: cover;
             background-position: center;
         }
 
         .img1 {
+            font-family: 'Hahmlet', serif;
             background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bucket-red.png");
         }
 
         .img2 {
+            font-family: 'Hahmlet', serif;
             background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bucket-lightred.png");
         }
 
         .title {
-            background-color: tomato;
+            font-family: 'Hahmlet', serif;
+            background-color: transparent;
             border-radius: 10px;
             padding: 4px 14px;
             color: white;
@@ -45,17 +48,119 @@
 
         .msg {
             margin: -5px 0 15px;
+            font-family: 'Hahmlet', serif;
+            font-size: 20px;
         }
+
+        .nav {
+            background-color: black;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+          }
+          
+          .nav-logo {
+            color: #414141;
+            font-size: 40px;
+            font-weight: bold;
+            text-decoration: none;
+          }
+          
+          .nav-links {
+            display: none;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+          }
+          
+          .nav-links li {
+            margin-left: 50px;
+          }
+          
+          .nav-links a {
+            color: #414141;
+            text-decoration: none;
+            font-size: 26px;
+            padding: 5px 15px;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+          }
+          
+          .nav-links a:hover {
+            background-color:  black;
+            color: #f9f8e3;
+          }
+          
+          .nav:hover .nav-links {
+            display: flex;
+          }
+          
+          h1 {
+              margin-top: 30px;
+            }
+  
+          h2 {
+            font-size: 50px;
+            text-align: center;
+            color: #2E2E2E;
+          }
+          
+          ul {
+            text-align: center;
+          }
+          
+          li {
+            display: inline-block;
+            margin: 50px;
+          }
+
+        /* navbar 스승의날 및 메뉴들 기본 모양 */
+        a {  
+            font-size: 50px;
+            text-decoration: none;
+            color: #2E2E2E;
+            
+            padding: 10px 50px;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+          }
+  
+          /* navbar 스승의날 및 메뉴들 마우스 가져다 댔을 때 변환 모양*/
+          a:hover {
+            background-color:  black;
+            color: #f9f8e3;
+          }
     </style>
     <link rel="stylesheet" type="text/css"href="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/sparta-bucket2.css">
 </head>
 
+<!--navbar-->
+<nav class="nav">
+    <a href="http://127.0.0.1:8000/" class="nav-logo">♥스승의 날♥</a>
+    <!--nav/categoty_btn-->
+    <ul class="nav-links">
+      <li><a href="http://127.0.0.1:8000/"><b>Home</b></a></li>
+      <li><a href="http://127.0.0.1:8000/rolling_paper/"><b>rolling_paper</b></a></li>
+      <li><a href="http://127.0.0.1:8000/profile/"><b>profile</b></a></li>
+      <li><a href="http://127.0.0.1:8000/quotes/"><b>quotes</b></a></li>
+    </ul>
+</nav>
+
+<!-- 상단 제목 부분 -->
 <body class="bg center">
-    <h1 class="title-t2" style="margin-top: 50px;"> ★★강사님의 주옥같은 명언.zip★★ </h1>
-    <p class="msg" align="center"><b>새겨들어 두면 인생 다방면으로 도움이 되는</b><br>서찬웅 강사님의 명언을 모았습니다.</p>
-    <p class="msg" align="left"><b>friends_list</b> = ['11번가', '삼성전자', 'LGCNS', '신한은행', '우리은행', ...]<br><b>for</b> company <b>in</b> friends_list<b>:</b><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp print("<b>아는 형이 f"{company}"에 다니는데...</b>")</p>
+    <div class="title" style="margin-bottom: 50px;">
+        <h1 class="title-t2" style="margin-top: 150px;">&nbsp&nbsp★★강사님의 주옥같은 명언.zip★★&nbsp&nbsp</h1>
+        <p class="msg" align="center"><b>새겨들어 두면 인생 다방면으로 도움이 되는</b><br>서찬웅 강사님의 명언을 모았습니다.</p>
+    </div>
 
+    <p class="msg" align="left" style="margin-bottom: 50px;"><b>friends_list</b> = ['11번가', '삼성전자', 'LGCNS', '신한은행', '우리은행', ...]<br><b>for</b> company <b>in</b> friends_list<b>:</b><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp print("<b>아는 형이 f"{company}"에 다니는데...</b>")</p>
 
+    <!-- 본문 명언 부분 -->
     <h1 class="title-t3" style="font-size: 25px; margin: 30px;">- 수업 편 -</h1>
     <div class="flex-row wrap">
       <div class="bucket img2-t2 center">코딩에<br>정해진 답은 없어요</div>
@@ -82,16 +187,6 @@
         <div class="bucket img2-t2 center" style="width: 200px; height:200px;">남성분들은 결혼하시면 가정의 평화를 위해서 젠킨스가 되시는 편이...</div>
     </div>
 </body>
-
-<!-- 아래 버튼들은 나중에 navbar로 빼던가 해야할덧~~! -->
-<div align="center">
-  <p> 
-      <a href="http://127.0.0.1:8000/" style="font-size: 20px; text-decoration: none; color: #2E2E2E; border: 2px solid #75B1FF; padding: 0 20px; border-radius: 50px; transition: all 0.3s ease-in-out;">▶home◀</a><br>
-      <a href="http://127.0.0.1:8000/rolling_paper/" style="font-size: 20px; text-decoration: none; color: #2E2E2E; border: 2px solid #75B1FF; padding: 0 20px; border-radius: 50px; transition: all 0.3s ease-in-out;">▶Rolling paper◀</a><br>
-      <a href="http://127.0.0.1:8000/profile/" style="font-size: 20px; text-decoration: none; color: #2E2E2E; border: 2px solid #75B1FF; padding: 0 20px; border-radius: 50px; transition: all 0.3s ease-in-out;">▶profile◀</a><br>
-      <a href="http://127.0.0.1:8000/quotes/" style="font-size: 20px; text-decoration: none; color: #2E2E2E; border: 2px solid #75B1FF; padding: 0 20px; border-radius: 50px; transition: all 0.3s ease-in-out;">▶quotes◀</a><br>
-  </p>
-  </div>
 
 </html>
 

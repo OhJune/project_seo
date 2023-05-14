@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 
 from .forms import UserForm
@@ -16,7 +16,11 @@ def signup(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-            return redirect('index')
+            return redirect('main_page:main')
     else:
         form = UserForm()
     return render(request, 'common/signup.html', {'form': form})
+
+def logout_view(request):
+    logout(request)
+    return redirect('main_page:main')

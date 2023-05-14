@@ -6,9 +6,8 @@
         <thead>
         <tr class="table-dark">
             <th>번호</th>
-            <th style="width:50%">제목</th>
-            <th>글쓴이</th>
-            <th>작성일시</th>
+            <th style="width:50%">강사님께 한마디</th>
+            <th>이름</th>
         </tr>
         </thead>
         <tbody>
@@ -26,7 +25,6 @@
                 </a>
             </td>
             <td>{{ question.author.username }}</td>
-            <td>{{ question.create_date }}</td>
         </tr>
         {% endfor %}
         {% else %}
@@ -76,7 +74,7 @@
     <!-- 페이징처리 끝 -->
 
     <a href="{% url 'rolling:question_create' %}" class="btn btn-primary">
-        질문
+        롤링페이퍼 작성하러 가기!
     </a>
 </div>
 {% endblock %}

@@ -2,17 +2,18 @@
 <!doctype html>
 <html lang="ko">
 
-{% include "navbar.html" %}
   <head>
     <link rel="stylesheet" type="text/css" href="{% static 'fonts/font.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %}</title>
     <style>
         /* @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Gowun+Batang&family=Jua&display=swap'); */
         
+
         body {
-          background: url("/static/img/서찬웅프로젝트.png");
-          background-size: cover;
+          background: url("/static/img/001.png"); 
+          background-size: contain;
           background-repeat: no-repeat;
           background-color: black;
           background-position: center center;
@@ -21,9 +22,75 @@
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          min-height: 100vh;
-          margin: auto;
+          width: auto;
+          height: 290px;
+          /*min-height: 103vh;*/
+          margin: 400px 0px 0px 0px;
         }
+
+        li {
+          display: inline-block;
+          margin: 50px;
+        }
+        
+        /* navbar 스승의날 및 메뉴들 기본 모양 */
+        a {  
+          font-size: 50px;
+          text-decoration: none;
+          color: #2E2E2E;
+          border: 2px solid transparent;
+          padding: 10px 50px;
+          border-radius: 50px;
+          transition: all 0.3s ease-in-out;
+        }
+        
+        /* navbar 스승의날 및 메뉴들 마우스 가져다 댔을 때 변환 모양*/
+        a:hover {
+          background-color: transparent;
+        }
+        
+        
+          /* 각 버튼에 대한 고유한 스타일 */
+          .btn-rp {
+            font-size: 30px;
+            padding: 60px 130px;
+          }
+        
+          .btn-pf {
+            font-size: 30px;
+            padding: 90px 150px;
+          }
+        
+          .btn-quo {
+            font-size: 30px;
+            padding: 70px 124px;
+          }
+        
+        
     </style>
   </head>
+
+  <body>
+
+    <div align="center">
+      <ul>
+        <li>
+          <div style="position: absolute; top: 23%; right: 12%; transform: rotate(10deg);">
+            <a href="http://127.0.0.1:8000/rolling_paper/" class="btn-rp"></a>
+          </div>
+        </li><br>
+        <li>
+          <div style="position: absolute; top: 66%; left: 31%;">
+            <a href="http://127.0.0.1:8000/profile/" class="btn-pf"></a>
+          </div>
+        </li><br>
+        <li>
+          <div style="position: absolute; top: 51.5%; right: 15%; transform: rotate(10deg);">
+            <a href="http://127.0.0.1:8000/quotes/" class="btn-quo"></a>
+          </div>
+        </li><br>
+      </ul>
+    </div>
+  </body>
+
 </html>

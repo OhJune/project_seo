@@ -22,10 +22,10 @@
         <tr>
             <td style="font-size: 20px; font-family: Gaegu;">{{ question_list.paginator.count|sub:question_list.start_index|sub:forloop.counter0|add:1 }}</td>
             <td>
-                <a href="{% url 'rolling:detail' question.id %}" style="font-size: 30px;">{{ question.subject }}
+                <a href="{% url 'rolling:detail' question.id %}" style="font-size: 30px;">{{ question.content }}
                     {% if question.answer_set.count > 0 %}
                         <span class="text-danger small ml-2">
-                            {{ question.answer_set.count}}
+                            {{ question.answer_set.count }}
                         </span>
                     {% endif %}
                 </a>

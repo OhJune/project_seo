@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'common.apps.CommonConfig',
+    'main_page.apps.MainPageConfig',
+    
 ]
 
 MIDDLEWARE = [
@@ -124,3 +127,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+
+# 로그인 성공후 이동하는 URL
+LOGIN_REDIRECT_URL = '/'

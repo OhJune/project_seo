@@ -19,10 +19,10 @@
             </div>
             {% if request.user == question.author %}
             <div class="my-3">
-                <a href="{% url 'main_page:question_modify' question.id  %}"
+                <a href="{% url 'rolling:question_modify' question.id  %}"
                    class="btn btn-sm btn-outline-secondary">수정</a>
                 <a href="#" class="delete btn btn-sm btn-outline-secondary"
-                   data-uri="{% url 'main_page:question_delete' question.id  %}">삭제</a>
+                   data-uri="{% url 'rolling:question_delete' question.id  %}">삭제</a>
             </div>
             {% endif %}
         </div>
@@ -46,16 +46,16 @@
             </div>
             {% if request.user == answer.author %}
             <div class="my-3">
-                <a href="{% url 'main_page:answer_modify' answer.id  %}"
+                <a href="{% url 'rolling:answer_modify' answer.id  %}"
                    class="btn btn-sm btn-outline-secondary">수정</a>
                 <a href="#" class="delete btn btn-sm btn-outline-secondary "
-                   data-uri="{% url 'main_page:answer_delete' answer.id  %}">삭제</a>
+                   data-uri="{% url 'rolling:answer_delete' answer.id  %}">삭제</a>
             </div>
             {% endif %}
             </div>
     </div>
     {% endfor %}
-    <form action="{% url 'main_page:answer_create' question.id %}" method="post" class="my-3">
+    <form action="{% url 'rolling:answer_create' question.id %}" method="post" class="my-3">
         {% csrf_token %}
         {% if form.errors %}
         <div class="alert alert-danger" role="alert">

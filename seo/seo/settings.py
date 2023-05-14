@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'common.apps.CommonConfig',
     'main_page.apps.MainPageConfig',
+    'rolling.apps.RollingConfig',
     
 ]
 

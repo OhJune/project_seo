@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load pybo_filter %}
+{% load rolling_filter %}
 {% block content %}
 <div class="container my-3">
     <table class="table">
@@ -17,7 +17,7 @@
         <tr>
             <td>{{ question_list.paginator.count|sub:question_list.start_index|sub:forloop.counter0|add:1 }}</td>
             <td>
-                <a href="{% url 'main_page:detail' question.id %}">{{ question.subject }}
+                <a href="{% url 'rolling:detail' question.id %}">{{ question.subject }}
                     {% if question.answer_set.count > 0 %}
                         <span class="text-danger small ml-2">
                             {{ question.answer_set.count}}
@@ -75,7 +75,7 @@
     </ul>
     <!-- 페이징처리 끝 -->
 
-    <a href="{% url 'main_page:question_create' %}" class="btn btn-primary">
+    <a href="{% url 'rolling:question_create' %}" class="btn btn-primary">
         질문
     </a>
 </div>

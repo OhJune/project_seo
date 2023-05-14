@@ -1,5 +1,5 @@
 from django import forms 
-from main_page.models import Question, Answer
+from rolling.models import Question, Answer
 
 class QuestionForm(forms.ModelForm):
     class Meta:

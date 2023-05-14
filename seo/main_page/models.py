@@ -1,6 +1,4 @@
 from django.db import models
-<<<<<<< HEAD
-=======
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
 class UserManager(BaseUserManager):
@@ -42,4 +40,3 @@ class RollingPaper(models.Model):
 
     def __str__(self):
         return self.title
->>>>>>> 0846c43897bbe12644ec604bf785140197af2dcd

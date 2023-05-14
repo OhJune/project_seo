@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
     <!-- pybo CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-    <title>Hello</title>
+    <title>{% block title %}{% endblock %}</title>
     <style>
         body {
             padding-top: 70px;

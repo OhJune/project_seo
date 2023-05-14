@@ -38,15 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
     'common.apps.CommonConfig',
     'main_page.apps.MainPageConfig',
     'rolling.apps.RollingConfig',
-    
-=======
-    'main_page.apps.MainPageConfig',
-    'common.apps.CommonConfig',
->>>>>>> 0846c43897bbe12644ec604bf785140197af2dcd
 ]
 
 MIDDLEWARE = [

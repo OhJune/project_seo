@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'CustomFont';
+  src: url('/static/fonts/SSShinb7Regular.ttf') format('truetype');
+}
+
+p{
+  font-family: 'CustomFont';
+}
+h1{
+  font-family: 'CustomFont';
+}
+h2{
+  font-family: 'CustomFont';
+}
+li{
+  font-family: 'CustomFont';
+}
+nav{
+    font-family: 'CustomFont';
+}

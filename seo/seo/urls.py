@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main_page.urls')), # 127.0.0.1로 접속하면 알아서 main_page url로 이동하게끔!
     path('common/', include('common.urls')),
+    path('rolling/', include('rolling.urls')),
 ]

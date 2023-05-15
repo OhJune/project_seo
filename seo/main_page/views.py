@@ -1,15 +1,15 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from common.views import signup
 
-# Create your views here.
 
-def index(request):
-    return render(request, 'main_page/index.html')
+def main(request):
+    return render(request, 'main_page/main.html')
 
-def rolling(request):
-    return render(request, 'main_page/rolling_paper.html')
 
 def profile(request):
     return render(request, 'main_page/profile.html')
 
 def quotes(request):
     return render(request, 'main_page/quotes.html')
+

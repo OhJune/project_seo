@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-dba&5$%yyzjel1bynbt#5wx(128ujx%-k^+))u0&!fyk-vp-hj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['3.35.235.162', '*']
 
 
 # Application definition
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'common.apps.CommonConfig',
     'main_page.apps.MainPageConfig',
-    
+    'rolling.apps.RollingConfig',
 ]
 
 MIDDLEWARE = [
@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'seo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mydb',
+        'USER' : 'root',
+        'PASSWORD' : '12345678',
+        'HOST' : 'jibeen-mysql.c9mnzpvc8vyh.ap-northeast-2.rds.amazonaws.com',
+        'PORT' : '3306'
     }
 }
 

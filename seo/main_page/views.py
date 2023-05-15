@@ -13,3 +13,5 @@ def profile(request):
 def quotes(request):
     return render(request, 'main_page/quotes.html')
 
+def quotes(request):
+    return render(request, 'main_page/rolling.html')

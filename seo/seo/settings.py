@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'common.apps.CommonConfig',
     'main_page.apps.MainPageConfig',
-    'rolling.apps.RollingConfig',
+    
 ]
 
 MIDDLEWARE = [
@@ -79,15 +79,10 @@ WSGI_APPLICATION = 'seo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mydb',
-        'USER' : 'root',
-        'PASSWORD' : '12345678',
-        'HOST' : 'jibeen-mysql.c9mnzpvc8vyh.ap-northeast-2.rds.amazonaws.com',
-        'PORT' : '3306'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

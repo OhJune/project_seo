@@ -21,4 +21,4 @@ def index(request):
     <img src="/static/img/해킹.png" alt="My img">
     <h1>이거 끝나면 다시 연결할 수 있게 도와주세요ㅠ</h1>
     '''
-    return HttpResponse(HTMLTemplate(article))
+    return HttpResponse(article)
